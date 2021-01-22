@@ -3,10 +3,7 @@
 
 namespace LexiconUppgifter
 {
-    /* 
-     * Funktion där användaren ska ange namnet på sin karaktär och namnet på en motståndare. 
-     * Funktionen skall sedan själv lägga till slumpmässiga värden för Hälsa, Styrka och Tur, som sparas i en instans av en klass.
-     */
+    
     class Player
     {
         
@@ -23,10 +20,16 @@ namespace LexiconUppgifter
     {
         public void Upgft16()
         {
+            /* 
+             * Funktion där användaren ska ange namnet på sin karaktär och namnet på en motståndare. 
+             * Funktionen skall sedan själv lägga till slumpmässiga värden för Hälsa, Styrka och Tur, som sparas i en instans av en klass.
+             */
+
             Console.WriteLine("========================== VÄLKOMMEN TILL UPPGIFT 16 ==========================");
             while (true)
             {
 
+                //Användaren
                 Console.WriteLine("");
                 Random rnd = new Random();
                 Console.WriteLine("Vad är din karaktärs namn? ");
@@ -36,14 +39,16 @@ namespace LexiconUppgifter
                 player.luck = rnd.Next(1, 5);
                 player.strength = rnd.Next(100,500);
 
+                //Motståndaren
                 Console.WriteLine("");
-                Console.WriteLine("Vad är din motståndarens namn? ");
+                Console.WriteLine("Vad är motståndarens namn? ");
                 Player enemy = new Player();
                 enemy.name = Console.ReadLine();
                 enemy.health = rnd.Next(50, 100);
                 enemy.luck = rnd.Next(1, 5);
                 enemy.strength = rnd.Next(100, 500);
 
+                //Utskriften
                 Console.WriteLine("");
                 Console.WriteLine("--------------------- Spelarna ---------------------");
                 Console.WriteLine("Spelarens\nNamn: "+ player.name + "\nStyrka: "+ player.strength + "\nLiv: "+ player.health +"\nTur: " + player.luck);
