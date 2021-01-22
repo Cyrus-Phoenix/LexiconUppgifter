@@ -27,6 +27,7 @@ namespace LexiconUppgifter
             while (true)
             {
 
+                Console.WriteLine("");
                 Random rnd = new Random();
                 Console.WriteLine("Vad är din karaktärs namn? ");
                 Player player = new Player();
@@ -35,19 +36,19 @@ namespace LexiconUppgifter
                 player.luck = rnd.Next(1, 5);
                 player.strength = rnd.Next(100,500);
 
-
-                Console.WriteLine("Vad är din motståndares namn? ");
+                Console.WriteLine("");
+                Console.WriteLine("Vad är din motståndarens namn? ");
                 Player enemy = new Player();
                 enemy.name = Console.ReadLine();
                 enemy.health = rnd.Next(50, 100);
                 enemy.luck = rnd.Next(1, 5);
                 enemy.strength = rnd.Next(100, 500);
 
-
-
-                Console.WriteLine("Spelarens\nNamn: "+ player.name + "\nStyrka: "+player.strength +"\nLiv: "+player.health+"\nTur: " + player.luck);
                 Console.WriteLine("");
-                Console.WriteLine("Motståndarens\nNamn: "+ enemy.name + "\nStyrka: "+enemy.strength +"\nLiv: "+enemy.health+"\nTur: " + enemy.luck);
+                Console.WriteLine("--------------------- Spelarna ---------------------");
+                Console.WriteLine("Spelarens\nNamn: "+ player.name + "\nStyrka: "+ player.strength + "\nLiv: "+ player.health +"\nTur: " + player.luck);
+                Console.WriteLine("");
+                Console.WriteLine("Motståndarens\nNamn: " + enemy.name + "\nStyrka: "+ enemy.strength + "\nLiv: "+ enemy.health +"\nTur: " + enemy.luck);
 
 
                 //Tillbaka till listan
